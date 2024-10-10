@@ -1,9 +1,17 @@
+"use client"
+
 import React from 'react'
+import SectionHeading from './section-heading'
+import { motion } from 'framer-motion'
 
 const About = () => { 
     return (
-        <section className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'>
-            <h2 className='text-3xl font-medium capitalize mb-8'>About me</h2>
+        <motion.section className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'
+        initial={{opacity: 0, y: 100}}
+        animate={{opacity: 1, y: 0}}
+        transition={{delay: 0.175}}
+        >
+            <SectionHeading>About me</SectionHeading>
             <p className="mb-3">
             After graduating with a degree in{" "}
             <span className="font-medium">Programming</span>, I decided to pursue my
@@ -30,7 +38,7 @@ const About = () => {
             <span className="font-medium">sales and making own buisness</span>. I'm also
             with my friends going for ASG.
           </p>
-        </section>
+        </motion.section>
       )
  }
 export default About
