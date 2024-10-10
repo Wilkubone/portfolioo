@@ -8,7 +8,7 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
 
-export default function Intro() {
+const Intro = () => { 
   return (
     <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
         <div className='flex items-center justify-center'>
@@ -40,7 +40,7 @@ export default function Intro() {
             </div>
         </div>
 
-        <motion.p className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
+        <motion.h1 className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
         initial={{opacity: 0, y: 100}}
         animate={{opacity: 1, y: 0}}
         
@@ -50,7 +50,7 @@ export default function Intro() {
         <span className="font-bold">2 years</span> of non-commercial experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
-        </motion.p>
+        </motion.h1>
 
         <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
         initial={{opacity: 0, y: 100}}
@@ -83,4 +83,6 @@ export default function Intro() {
 
     </section>
   )
-}
+ }
+
+export default Intro
