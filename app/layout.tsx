@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Tomasz | Personal Portfolio',
-  description: 'Im FullStack developer',
+  description: 'I"m FullStack developer',
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
