@@ -8,6 +8,7 @@ export const useSectionInView = (
 	threshold = 0.75
 ) => {
 	const { ref, inView } = useInView({
+		triggerOnce: true,
 		threshold,
 	});
 	const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
@@ -17,5 +18,5 @@ export const useSectionInView = (
 			setActiveSection(sectionName);
 		}
 	}, [inView, setActiveSection, timeOfLastClick, sectionName]);
-	return { ref };
+	return { ref, inView };
 };
